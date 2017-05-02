@@ -1130,7 +1130,7 @@ static NSString *const ATLDefaultPushAlertText = @"sent you a message.";
 
 #pragma mark - Data Source
 
-- (id<ATLParticipant>)participantForIdentity:(LYRIdentity *)identity;
+- (id<ATLParticipant>)participantForIdentity:(LYRIdentity *)identity
 {
     if ([self.dataSource respondsToSelector:@selector(conversationViewController:participantForIdentity:)]) {
         return [self.dataSource conversationViewController:self participantForIdentity:identity];
