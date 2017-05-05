@@ -211,7 +211,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithLayerClient:(LYRClient *)layerClient;
 
-- (id<ATLParticipant>)participantForIdentity:(LYRIdentity *)identity;
+- (id<ATLParticipant>)identityAsParticipant:(LYRIdentity *)identity;
 
 /**
  @abstract The `LYRClient` object used to initialize the controller.
