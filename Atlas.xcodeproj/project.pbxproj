@@ -334,8 +334,6 @@
 		3DA2FB181F1E9DF500E890FA /* ATLConversationCollectionViewMoreMessagesHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLConversationCollectionViewMoreMessagesHeader.m; sourceTree = "<group>"; };
 		3DA2FB191F1E9DF500E890FA /* ATLConversationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLConversationTableViewCell.h; sourceTree = "<group>"; };
 		3DA2FB1A1F1E9DF500E890FA /* ATLConversationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLConversationTableViewCell.m; sourceTree = "<group>"; };
-		3DA2FB1B1F1E9DF500E890FA /* ATLConversationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLConversationView.h; sourceTree = "<group>"; };
-		3DA2FB1C1F1E9DF500E890FA /* ATLConversationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLConversationView.m; sourceTree = "<group>"; };
 		3DA2FB1D1F1E9DF500E890FA /* ATLIncomingMessageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLIncomingMessageCollectionViewCell.h; sourceTree = "<group>"; };
 		3DA2FB1E1F1E9DF500E890FA /* ATLIncomingMessageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLIncomingMessageCollectionViewCell.m; sourceTree = "<group>"; };
 		3DA2FB1F1F1E9DF500E890FA /* ATLMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLMessageBubbleView.h; sourceTree = "<group>"; };
@@ -670,6 +668,7 @@
 		412524007C3A7505AC34F33C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AE24F6C1F60EB0700D94340 /* LayerKit.framework */,
 				95A744001D22A9D600BED68D /* LayerKit.framework */,
 				250C5EF21C7656610084EB18 /* LayerKit.framework */,
 				5DE31FA9B1906CEA04D0C891 /* Pods.framework */,
@@ -956,7 +955,6 @@
 				3DA2FB3D1F1E9DF500E890FA /* ATLParticipantTableViewController.h in Headers */,
 				3DA2FB7A1F1E9DF500E890FA /* ATLMessageComposeTextView.h in Headers */,
 				3DA2FB4A1F1E9DF500E890FA /* ATLConversationPresenting.h in Headers */,
-				3DA2FB721F1E9DF500E890FA /* ATLConversationView.h in Headers */,
 				3DA2FB601F1E9DF500E890FA /* ATLAddressBarTextView.h in Headers */,
 				9AF911841FE22A3D00F26033 /* UICollectionView+ATLHelpers.h in Headers */,
 				3DA2FB4B1F1E9DF500E890FA /* ATLMessagePresenting.h in Headers */,
@@ -1594,7 +1592,6 @@
 				3DA2FB421F1E9DF500E890FA /* ATLConversationDataSource.m in Sources */,
 				3DA2FB871F1E9DF500E890FA /* ATLPresenceStatusView.m in Sources */,
 				3DA2FB481F1E9DF500E890FA /* ATLParticipantTableDataSet.m in Sources */,
-				3DA2FB731F1E9DF500E890FA /* ATLConversationView.m in Sources */,
 				3DA2FB441F1E9DF500E890FA /* ATLDataSourceChange.m in Sources */,
 				3DA2FB631F1E9DF500E890FA /* ATLAddressBarView.m in Sources */,
 				3DA2FB831F1E9DF500E890FA /* ATLParticipantTableViewCell.m in Sources */,
