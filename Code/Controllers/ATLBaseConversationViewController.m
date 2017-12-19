@@ -20,6 +20,8 @@
 
 #import "ATLBaseConversationViewController.h"
 
+#import "UIView+ATLHelpers.h"
+
 static inline BOOL atl_systemVersionLessThan(NSString * _Nonnull systemVersion) {
     return [[[UIDevice currentDevice] systemVersion] compare:systemVersion options:NSNumericSearch] == NSOrderedAscending;
 }
@@ -30,6 +32,7 @@ static inline BOOL atl_systemVersionLessThan(NSString * _Nonnull systemVersion) 
 @property (nonatomic) NSLayoutConstraint *typingIndicatorViewBottomConstraint;
 @property (nonatomic) NSLayoutConstraint *messageInputViewBottomConstraint;
 @property (nonatomic) CGFloat keyboardHeight;
+@property (nonatomic) CGFloat containerToolbarSafeInsetBottom;
 @property (nonatomic, getter=isFirstAppearance) BOOL firstAppearance;
 
 @end
@@ -111,6 +114,11 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
 {
     [super viewWillAppear:animated];
     
+    // Workaround for a modal dismissal causing the message toolbar to remain offscreen on iOS 8.
+    if (self.presentedViewController) {
+        [self.view becomeFirstResponder];
+    }
+    
     if (self.addressBarController && self.firstAppearance) {
         [self updateTopCollectionViewInset];
     }
@@ -136,6 +144,11 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
         //[self.view becomeFirstResponder];
     }
     
+    UIEdgeInsets safeAreaInsets = [self.messageInputToolbar.containerToolbar atl_safeAreaInsets];
+    self.containerToolbarSafeInsetBottom = safeAreaInsets.bottom;
+
+    [self updateBottomCollectionViewInset];
+
     if (self.isFirstAppearance) {
         self.firstAppearance = NO;
         // We use the content size of the actual collection view when calculating the ammount to scroll. Hence, we layout the collection view before scrolling to the bottom.
@@ -220,10 +233,17 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
     [self.messageInputToolbar layoutIfNeeded];
     
     UIEdgeInsets insets = self.collectionView.contentInset;
-    CGFloat keyboardHeight = MAX(self.keyboardHeight, CGRectGetHeight(self.messageInputToolbar.containerToolbar.frame));
-    
-    insets.bottom = keyboardHeight + self.typingIndicatorInset;
-    self.collectionView.scrollIndicatorInsets = insets;
+    UIEdgeInsets scrollInsets = self.collectionView.contentInset;
+    CGFloat keyboardHeight = self.keyboardHeight;
+    CGFloat scrollKeyboardHeight = self.keyboardHeight;
+    if(self.messageInputToolbar.containerToolbar.isHidden == NO) {
+        CGFloat messageInputToolbarHeight = CGRectGetHeight(self.messageInputToolbar.containerToolbar.textInputView.frame) + (self.messageInputToolbar.containerToolbar.verticalMargin * 2) + self.containerToolbarSafeInsetBottom;
+        keyboardHeight += messageInputToolbarHeight;
+        scrollKeyboardHeight -= self.containerToolbarSafeInsetBottom;
+    }
+    scrollInsets.bottom = scrollKeyboardHeight;
+    insets.bottom = keyboardHeight;
+    self.collectionView.scrollIndicatorInsets = scrollInsets;
     self.collectionView.contentInset = insets;
     self.typingIndicatorViewBottomConstraint.constant = -keyboardHeight;
 }
@@ -237,6 +257,7 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
     }
     self.messageInputToolbar.hidden = NO;
     self.messageInputToolbar.containerToolbar.hidden = YES;
+    [self updateViewConstraints];
     [self configureWithKeyboardNotification:notification];
     
     if (self.presentedViewController == nil) {
@@ -246,6 +267,7 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
+    [self updateViewConstraints];
     self.messageInputToolbar.containerToolbar.hidden = NO;
     self.messageInputToolbar.hidden = YES;
     if (![self.navigationController.viewControllers containsObject:self]) {
@@ -323,7 +345,7 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
     CGFloat contentSizeHeight = contentSize.height;
     CGFloat collectionViewFrameHeight = self.collectionView.frame.size.height;
     CGFloat collectionViewBottomInset = self.collectionView.contentInset.bottom;
-    CGFloat collectionViewTopInset = self.collectionView.contentInset.top;
+    CGFloat collectionViewTopInset = self.collectionView.contentInset.top + self.containerToolbarSafeInsetBottom;
     CGFloat calculatedHeight = contentSizeHeight - (collectionViewFrameHeight - collectionViewBottomInset);
     
     if (@available(iOS 11, *)) {
@@ -348,6 +370,7 @@ static CGFloat const ATLMaxMessageInputHeight = 100;
         }
     }
     self.typingIndicatorViewBottomConstraint.constant = typingIndicatorBottomConstraintConstant;
+
     [super updateViewConstraints];
 }
 
