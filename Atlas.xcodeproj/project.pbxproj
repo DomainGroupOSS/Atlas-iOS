@@ -114,7 +114,6 @@
 		3DA2FB871F1E9DF500E890FA /* ATLPresenceStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FB301F1E9DF500E890FA /* ATLPresenceStatusView.m */; };
 		3DA2FB881F1E9DF500E890FA /* ATLProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA2FB311F1E9DF500E890FA /* ATLProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DA2FB891F1E9DF500E890FA /* ATLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FB321F1E9DF500E890FA /* ATLProgressView.m */; };
-		3DA2FB8C1F1EA03400E890FA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DA2FB8B1F1EA03400E890FA /* Info.plist */; };
 		40EBBF671E9D4C2300C25041 /* ATLAvatarViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EBBF651E9D4C1B00C25041 /* ATLAvatarViewTest.m */; };
 		40EBBF681E9D4C2400C25041 /* ATLAvatarViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EBBF651E9D4C1B00C25041 /* ATLAvatarViewTest.m */; };
 		58239E45B91E3CD954E75554 /* Pods_test_ProgrammaticTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8050D6CFBC2EA1D5D6B800A /* Pods_test_ProgrammaticTests.framework */; };
@@ -334,8 +333,6 @@
 		3DA2FB181F1E9DF500E890FA /* ATLConversationCollectionViewMoreMessagesHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLConversationCollectionViewMoreMessagesHeader.m; sourceTree = "<group>"; };
 		3DA2FB191F1E9DF500E890FA /* ATLConversationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLConversationTableViewCell.h; sourceTree = "<group>"; };
 		3DA2FB1A1F1E9DF500E890FA /* ATLConversationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLConversationTableViewCell.m; sourceTree = "<group>"; };
-		3DA2FB1B1F1E9DF500E890FA /* ATLConversationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLConversationView.h; sourceTree = "<group>"; };
-		3DA2FB1C1F1E9DF500E890FA /* ATLConversationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLConversationView.m; sourceTree = "<group>"; };
 		3DA2FB1D1F1E9DF500E890FA /* ATLIncomingMessageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLIncomingMessageCollectionViewCell.h; sourceTree = "<group>"; };
 		3DA2FB1E1F1E9DF500E890FA /* ATLIncomingMessageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLIncomingMessageCollectionViewCell.m; sourceTree = "<group>"; };
 		3DA2FB1F1F1E9DF500E890FA /* ATLMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLMessageBubbleView.h; sourceTree = "<group>"; };
@@ -955,7 +952,6 @@
 				3DA2FB3D1F1E9DF500E890FA /* ATLParticipantTableViewController.h in Headers */,
 				3DA2FB7A1F1E9DF500E890FA /* ATLMessageComposeTextView.h in Headers */,
 				3DA2FB4A1F1E9DF500E890FA /* ATLConversationPresenting.h in Headers */,
-				3DA2FB721F1E9DF500E890FA /* ATLConversationView.h in Headers */,
 				3DA2FB601F1E9DF500E890FA /* ATLAddressBarTextView.h in Headers */,
 				9AF911841FE22A3D00F26033 /* UICollectionView+ATLHelpers.h in Headers */,
 				3DA2FB4B1F1E9DF500E890FA /* ATLMessagePresenting.h in Headers */,
@@ -1015,7 +1011,6 @@
 				D0294DD51A93F33900702856 /* Frameworks */,
 				D0294DD61A93F33900702856 /* Resources */,
 				DBB73C07ACFE371256674EFE /* [CP] Embed Pods Frameworks */,
-				F728FF30D518513156FA5822 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1035,7 +1030,6 @@
 				D6F57E271A8BE4AF00B62BD9 /* Frameworks */,
 				D6F57E281A8BE4AF00B62BD9 /* Resources */,
 				F4A445D314319BCAB2ADA9CE /* [CP] Embed Pods Frameworks */,
-				08CE458C0777E0BAD1AB2CCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1056,7 +1050,6 @@
 				D6F57E3F1A8BE4AF00B62BD9 /* Frameworks */,
 				D6F57E401A8BE4AF00B62BD9 /* Resources */,
 				6A6F86F8CA07FFBB04E61E87 /* [CP] Embed Pods Frameworks */,
-				FF085973D69F3AD4A0F6D230 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1077,7 +1070,6 @@
 				D6F57E511A8BE4B500B62BD9 /* Frameworks */,
 				D6F57E521A8BE4B500B62BD9 /* Resources */,
 				7C8393B40F348433BAFDD0B9 /* [CP] Embed Pods Frameworks */,
-				5C91C26C5EBCE2E7CCA364BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1098,7 +1090,6 @@
 				D6F57E691A8BE4B500B62BD9 /* Frameworks */,
 				D6F57E6A1A8BE4B500B62BD9 /* Resources */,
 				E5D44FE0613FCC68DD0D5DA8 /* [CP] Embed Pods Frameworks */,
-				EB4412495A7D3F167A23153E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1177,7 +1168,6 @@
 				3DA2FAC41F1E9DAE00E890FA /* block@2x.png in Resources */,
 				3DA2FAC51F1E9DAE00E890FA /* block@3x.png in Resources */,
 				3DA2FAC31F1E9DAE00E890FA /* block.png in Resources */,
-				3DA2FB8C1F1EA03400E890FA /* Info.plist in Resources */,
 				3DA2FACB1F1E9DAE00E890FA /* chevron@3x.png in Resources */,
 				3DA2FAC91F1E9DAE00E890FA /* chevron.png in Resources */,
 				3DA2FAC81F1E9DAE00E890FA /* camera_dark@3x.png in Resources */,
@@ -1275,49 +1265,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08CE458C0777E0BAD1AB2CCD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Programmatic/Pods-Programmatic-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0E91511FE1C31A95393AADF9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Programmatic-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5C91C26C5EBCE2E7CCA364BC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Storyboard/Pods-Storyboard-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A6F86F8CA07FFBB04E61E87 /* [CP] Embed Pods Frameworks */ = {
@@ -1326,9 +1289,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-test-ProgrammaticTests/Pods-test-ProgrammaticTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+				"${PODS_ROOT}/LayerKit/LayerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/KIFViewControllerActions/KIFViewControllerActions.framework",
+				"${BUILT_PRODUCTS_DIR}/LYRCountDownLatch/LYRCountDownLatch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIFViewControllerActions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LYRCountDownLatch.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1341,9 +1319,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Storyboard/Pods-Storyboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+				"${PODS_ROOT}/LayerKit/LayerKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayerKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1356,13 +1339,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Storyboard-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6AC1293F3245E2306641C54 /* [CP] Check Pods Manifest.lock */ = {
@@ -1371,13 +1357,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test-StoryboardTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBCF98B5B1502954C192D5A1 /* [CP] Check Pods Manifest.lock */ = {
@@ -1386,13 +1375,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7F25408D7A2A75304BAA423 /* [CP] Check Pods Manifest.lock */ = {
@@ -1401,13 +1393,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test-ProgrammaticTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBB73C07ACFE371256674EFE /* [CP] Embed Pods Frameworks */ = {
@@ -1416,9 +1411,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+				"${PODS_ROOT}/LayerKit/LayerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1431,28 +1437,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-test-StoryboardTests/Pods-test-StoryboardTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+				"${PODS_ROOT}/LayerKit/LayerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/KIFViewControllerActions/KIFViewControllerActions.framework",
+				"${BUILT_PRODUCTS_DIR}/LYRCountDownLatch/LYRCountDownLatch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIFViewControllerActions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LYRCountDownLatch.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test-StoryboardTests/Pods-test-StoryboardTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB4412495A7D3F167A23153E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test-StoryboardTests/Pods-test-StoryboardTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4A445D314319BCAB2ADA9CE /* [CP] Embed Pods Frameworks */ = {
@@ -1461,43 +1467,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Programmatic/Pods-Programmatic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+				"${PODS_ROOT}/LayerKit/LayerKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayerKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Programmatic/Pods-Programmatic-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F728FF30D518513156FA5822 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF085973D69F3AD4A0F6D230 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test-ProgrammaticTests/Pods-test-ProgrammaticTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1525,7 +1506,6 @@
 				3DA2FB421F1E9DF500E890FA /* ATLConversationDataSource.m in Sources */,
 				3DA2FB871F1E9DF500E890FA /* ATLPresenceStatusView.m in Sources */,
 				3DA2FB481F1E9DF500E890FA /* ATLParticipantTableDataSet.m in Sources */,
-				3DA2FB731F1E9DF500E890FA /* ATLConversationView.m in Sources */,
 				3DA2FB441F1E9DF500E890FA /* ATLDataSourceChange.m in Sources */,
 				3DA2FB631F1E9DF500E890FA /* ATLAddressBarView.m in Sources */,
 				3DA2FB831F1E9DF500E890FA /* ATLParticipantTableViewCell.m in Sources */,
