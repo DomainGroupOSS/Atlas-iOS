@@ -184,7 +184,7 @@ NSString *const LYRConversationOptionsMetadataKey = @"metadata";
 
 #pragma mark - Typing Indicator
 
-- (void)sendTypingIndicator:(LYRTypingIndicator *)typingIndicator
+- (void)sendTypingIndicator:(LYRTypingIndicatorAction *)typingIndicator
 {
     //
 }
@@ -206,6 +206,11 @@ NSString *const LYRConversationOptionsMetadataKey = @"metadata";
     self.hasUnreadMessages = NO;
     [[LYRMockContentStore sharedStore] broadcastChanges];
     return YES;
+}
+
+- (BOOL)synchronizeMoreMessages:(NSUInteger)minimumNumberOfMessages error:(NSError * _Nullable * _Nullable)error
+{
+    return NO;
 }
 
 @end
