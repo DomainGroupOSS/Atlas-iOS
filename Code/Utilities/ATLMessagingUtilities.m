@@ -199,7 +199,8 @@ LYRMessage *ATLMessageForParts(LYRClient *layerClient, NSSet *messageParts, NSSt
     LYRMessageOptions *messageOptions = [LYRMessageOptions new];
     messageOptions.pushNotificationConfiguration = defaultConfiguration;
     NSError *error;
-    LYRMessage *message = [layerClient newMessageWithParts:messageParts options:messageOptions error:&error];
+
+    LYRMessage *message = [layerClient newMessageWithParts:messageParts.allObjects options:messageOptions error:&error];
     if (error) {
         return nil;
     }
@@ -237,7 +238,7 @@ NSSet *ATLMessagePartsWithMediaAttachment(ATLMediaAttachment *mediaAttachment)
 LYRMessagePart *ATLMessagePartForMIMEType(LYRMessage *message, NSString *MIMEType)
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"MIMEType == %@", MIMEType];
-    return [[message.parts filteredSetUsingPredicate:predicate] anyObject];
+    return [[message.parts filteredArrayUsingPredicate:predicate] firstObject];
 }
 
 #pragma mark - Image Capture Utilities
