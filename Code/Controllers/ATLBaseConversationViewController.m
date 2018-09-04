@@ -214,7 +214,7 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
     
     UIEdgeInsets insets = self.collectionView.contentInset;
     CGFloat keyboardHeight = self.keyboardHeight;
-    }
+    
     insets.bottom = keyboardHeight + self.typingIndicatorInset;
     self.collectionView.scrollIndicatorInsets = insets;
     self.collectionView.contentInset = insets;
