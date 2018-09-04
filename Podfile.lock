@@ -19,6 +19,14 @@ DEPENDENCIES:
   - LYRCountDownLatch (from `https://github.com/layerhq/LYRCountDownLatch.git`)
   - OCMock
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - KIF
+    - KIFViewControllerActions
+    - LayerKit
+    - OCMock
+
 EXTERNAL SOURCES:
   Atlas:
     :path: "."
@@ -27,11 +35,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   LYRCountDownLatch:
-    :commit: '02119f855ad14e7fc0dae32bbbf17c735a281cfe'
+    :commit: 02119f855ad14e7fc0dae32bbbf17c735a281cfe
     :git: https://github.com/layerhq/LYRCountDownLatch.git
 
 SPEC CHECKSUMS:
-  Atlas: bacae8c809135268a984a68f0bc1e11086ff6a21
+  Atlas: 862849c658a53f9cf71251b79d5d4c72b09df706
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   KIF: 4c23b5d24dba24d3cb6dbb9c7d325b31e526ba4a
   KIFViewControllerActions: 923795dc4bd4ca5657841ce7455ce67447693861
@@ -41,4 +49,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 8961daffdeefa8d5f0425798d1cff0caed066344
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
