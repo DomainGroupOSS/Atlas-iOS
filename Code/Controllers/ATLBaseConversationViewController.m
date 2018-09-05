@@ -78,6 +78,17 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
     [self.view addSubview:self.typingIndicatorController.view];
     [self.typingIndicatorController didMoveToParentViewController:self];
     [self configureTypingIndicatorLayoutConstraints];
+
+    // Add message input tool bar
+    self.messageInputToolbar = [self initializeMessageInputToolbar];
+    self.messageInputToolbar.containerToolbar = [self initializeMessageInputToolbar];
+    self.messageInputToolbar.containerToolbar.isContainerToolbar = YES;
+    
+    [self.view addSubview:self.messageInputToolbar.containerToolbar];
+    //no longer part of the input accessory view why? because tab bar
+    self.messageInputToolbar.containerViewController = self;
+    self.messageInputToolbar.containerToolbar.textInputView.inputAccessoryView = self.messageInputToolbar;
+    [self configureMessageInputLayoutConstraints];
     
     // Add address bar if needed
     if (self.displaysAddressBar) {
@@ -129,6 +140,11 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
         [self.view becomeFirstResponder];
     }
     
+    UIEdgeInsets safeAreaInsets = [self.messageInputToolbar.containerToolbar atl_safeAreaInsets];
+    self.containerToolbarSafeInsetBottom = safeAreaInsets.bottom;
+
+    [self updateBottomCollectionViewInset];
+
     if (self.isFirstAppearance) {
         self.firstAppearance = NO;
         // We use the content size of the actual collection view when calculating the ammount to scroll. Hence, we layout the collection view before scrolling to the bottom.
@@ -211,12 +227,20 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
 - (void)updateBottomCollectionViewInset
 {
     [self.messageInputToolbar layoutIfNeeded];
-    
+
     UIEdgeInsets insets = self.collectionView.contentInset;
-    CGFloat keyboardHeight = self.keyboardHeight;
     
-    insets.bottom = keyboardHeight + self.typingIndicatorInset;
-    self.collectionView.scrollIndicatorInsets = insets;
+    UIEdgeInsets scrollInsets = self.collectionView.contentInset;
+    CGFloat keyboardHeight = self.keyboardHeight;
+    CGFloat scrollKeyboardHeight = self.keyboardHeight;
+    if(self.messageInputToolbar.containerToolbar.isHidden == NO) {
+        CGFloat messageInputToolbarHeight = CGRectGetHeight(self.messageInputToolbar.containerToolbar.textInputView.frame) + (self.messageInputToolbar.containerToolbar.verticalMargin * 2) + self.containerToolbarSafeInsetBottom;
+        keyboardHeight += messageInputToolbarHeight;
+        scrollKeyboardHeight -= self.containerToolbarSafeInsetBottom;
+    }
+    scrollInsets.bottom = scrollKeyboardHeight;
+    insets.bottom = keyboardHeight;
+    self.collectionView.scrollIndicatorInsets = scrollInsets;
     self.collectionView.contentInset = insets;
     self.typingIndicatorViewBottomConstraint.constant = -keyboardHeight;
 }
@@ -228,15 +252,27 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
     if ([[self navigationController] modalPresentationStyle] == UIModalPresentationPopover) {
         return;
     }
+    self.messageInputToolbar.hidden = NO;
+    self.messageInputToolbar.containerToolbar.hidden = YES;
+    [self updateViewConstraints];
     [self configureWithKeyboardNotification:notification];
+    
+    if (self.presentedViewController == nil) {
+        [self.messageInputToolbar becomeFirstResponder];
+    }
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
+    [self updateViewConstraints];
+    self.messageInputToolbar.containerToolbar.hidden = NO;
+    self.messageInputToolbar.hidden = YES;
     if (![self.navigationController.viewControllers containsObject:self]) {
         return;
     }
     [self configureWithKeyboardNotification:notification];
+    
+    self.messageInputToolbar.containerToolbar.textInputView.attributedText = self.messageInputToolbar.textInputView.attributedText;
 }
 
 - (void)messageInputToolbarDidChangeHeight:(NSNotification *)notification
@@ -306,7 +342,7 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
     CGFloat contentSizeHeight = contentSize.height;
     CGFloat collectionViewFrameHeight = self.collectionView.frame.size.height;
     CGFloat collectionViewBottomInset = self.collectionView.contentInset.bottom;
-    CGFloat collectionViewTopInset = self.collectionView.contentInset.top;
+    CGFloat collectionViewTopInset = self.collectionView.contentInset.top + self.containerToolbarSafeInsetBottom;
     CGPoint offset = CGPointMake(0, MAX(-collectionViewTopInset, contentSizeHeight - (collectionViewFrameHeight - collectionViewBottomInset)));
     return offset;
 }
@@ -347,6 +383,15 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.typingIndicatorController.view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:ATLTypingIndicatorHeight]];
     self.typingIndicatorViewBottomConstraint = [NSLayoutConstraint constraintWithItem:self.typingIndicatorController.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
     [self.view addConstraint:self.typingIndicatorViewBottomConstraint];
+}
+
+
+- (void)configureMessageInputLayoutConstraints
+{
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.messageInputToolbar.containerToolbar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.messageInputToolbar.containerToolbar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.messageInputToolbar.containerToolbar attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.messageInputToolbar.containerToolbar attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
 }
 
 - (void)configureAddressbarLayoutConstraints
