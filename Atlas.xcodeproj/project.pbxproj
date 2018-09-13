@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		150813781FD826AC0069802E /* UIView+ATLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 150813731FD826AB0069802E /* UIView+ATLHelpers.m */; };
-		150813791FD826AC0069802E /* UIMutableUserNotificationAction+ATLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 150813741FD826AB0069802E /* UIMutableUserNotificationAction+ATLHelpers.m */; };
-		1508137A1FD826AC0069802E /* UICollectionView+ATLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 150813751FD826AB0069802E /* UICollectionView+ATLHelpers.m */; };
 		3DA2FAC31F1E9DAE00E890FA /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = 7858B60C1CE54BBE007795AB /* block.png */; };
 		3DA2FAC41F1E9DAE00E890FA /* block@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7858B60D1CE54BBE007795AB /* block@2x.png */; };
 		3DA2FAC51F1E9DAE00E890FA /* block@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7858B60E1CE54BBE007795AB /* block@3x.png */; };
@@ -114,7 +111,6 @@
 		3DA2FB871F1E9DF500E890FA /* ATLPresenceStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FB301F1E9DF500E890FA /* ATLPresenceStatusView.m */; };
 		3DA2FB881F1E9DF500E890FA /* ATLProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA2FB311F1E9DF500E890FA /* ATLProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DA2FB891F1E9DF500E890FA /* ATLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FB321F1E9DF500E890FA /* ATLProgressView.m */; };
-		3DA2FB8C1F1EA03400E890FA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DA2FB8B1F1EA03400E890FA /* Info.plist */; };
 		40EBBF671E9D4C2300C25041 /* ATLAvatarViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EBBF651E9D4C1B00C25041 /* ATLAvatarViewTest.m */; };
 		40EBBF681E9D4C2400C25041 /* ATLAvatarViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EBBF651E9D4C1B00C25041 /* ATLAvatarViewTest.m */; };
 		58239E45B91E3CD954E75554 /* Pods_test_ProgrammaticTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8050D6CFBC2EA1D5D6B800A /* Pods_test_ProgrammaticTests.framework */; };
@@ -390,7 +386,6 @@
 		959F1869E1FC45A3651F40B6 /* Pods-test-StoryboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-StoryboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-StoryboardTests/Pods-test-StoryboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		95A744001D22A9D600BED68D /* LayerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayerKit.framework; path = Pods/LayerKit/LayerKit.framework; sourceTree = "<group>"; };
 		98BF90733247F9CE21529791 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
-		9AE24F6C1F60EB0700D94340 /* LayerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayerKit.framework; path = "Carthage/Checkouts/releases-ios/LayerKit.framework"; sourceTree = "<group>"; };
 		9AF911811FE22A3D00F26033 /* UICollectionView+ATLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ATLHelpers.m"; sourceTree = "<group>"; };
 		9AF911821FE22A3D00F26033 /* UICollectionView+ATLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+ATLHelpers.h"; sourceTree = "<group>"; };
 		9AF9118A1FE22D4700F26033 /* UIView+ATLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ATLHelpers.m"; sourceTree = "<group>"; };
@@ -1170,7 +1165,6 @@
 				3DA2FAC41F1E9DAE00E890FA /* block@2x.png in Resources */,
 				3DA2FAC51F1E9DAE00E890FA /* block@3x.png in Resources */,
 				3DA2FAC31F1E9DAE00E890FA /* block.png in Resources */,
-				3DA2FB8C1F1EA03400E890FA /* Info.plist in Resources */,
 				3DA2FACB1F1E9DAE00E890FA /* chevron@3x.png in Resources */,
 				3DA2FAC91F1E9DAE00E890FA /* chevron.png in Resources */,
 				3DA2FAC81F1E9DAE00E890FA /* camera_dark@3x.png in Resources */,
